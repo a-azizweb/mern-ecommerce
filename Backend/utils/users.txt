@@ -1,0 +1,8 @@
+
+Admin Credentials
+{   
+"email":
+"ahmadazizhaider@gmail.com",
+"password":
+"0000000000"
+}
