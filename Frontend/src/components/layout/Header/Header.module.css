@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+  box-sizing: border-box;
+}
+
+.header {
+  /* background-color: #ffd100; */
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  /* grid-template-columns: repeat(3, 1fr); */
+  padding: 0 25px;
+  height: 60px;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  font-size: 25px;
+}
+.search {
+  border: 1px solid grey;
+  border-radius: 15px;
+  display: flex;
+}
+
+.search input {
+  height: 32px;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  background: none;
+  font-size: 16px;
+  color: #333533;
+}
+.search .inputSearchIcon {
+  background: none;
+  border: none;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons .icon {
+  color: #333533;
+  text-decoration: none;
+  font-size: 22px;
+  padding-left: 15px;
+
+  transition: 0.6s;
+}
+.icons .Bars {
+  color: #333533;
+  text-decoration: none;
+  font-size: 22px;
+  padding-left: 15px;
+  transition: 1s;
+  visibility: hidden;
+}
+.icons .searchIcon {
+  color: #333533;
+  text-decoration: none;
+  font-size: 22px;
+
+  transition: 0.3s;
+  visibility: hidden;
+}
+.icons .icon {
+  font-size: 1.8vmax;
+}
+.icons .icon:hover {
+  color: tomato;
+}
+.logo {
+  text-decoration: none;
+  color: #333533;
+}
+.cartBatch {
+  position: absolute;
+  top: 5px;
+  right: 90px;
+  font-size: 1vmax;
+  padding: 0vmax 0.3vmax;
+  background-color: tomato;
+  border: 1px solid tomato;
+  color: white;
+  border-radius: 50%;
+  width: max-content;
+  text-align: center;
+}
+.cartBatch2 {
+  position: absolute;
+  top: 5px;
+  right: 55px;
+  font-size: 1vmax;
+  padding: 0vmax 0.3vmax;
+  background-color: tomato;
+  border: 1px solid tomato;
+  color: white;
+  border-radius: 50%;
+  width: max-content;
+  text-align: center;
+}
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.links .link {
+  color: #333533;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.menuBar {
+  background-color: #f3f3f3;
+  width: 100%;
+  left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  position: absolute;
+  top: 50px;
+  z-index: 100;
+}
+.menuBarsearch > form {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.menuBarsearch input {
+  height: 32px;
+
+  outline: none;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #333533;
+  display: none;
+  border: none;
+  background: none;
+}
+.menuBarsearch .inputSearchIcon {
+  background: none;
+  border: none;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.menuBarLink {
+  color: #333533;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* SpeedDial component */
+
+.speedDial {
+  position: fixed;
+  top: 25vmax;
+  right: 1vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .icons .icon {
+    font-size: 20px;
+  }
+  .icons .Bars {
+    font-size: 20px;
+  }
+  .inputSearchIcon {
+    margin-right: 10px;
+    padding: 0;
+    color: #000;
+  }
+}
+@media screen and (max-width: 940px) {
+  .header {
+    grid-template-columns: 1fr 2fr;
+  }
+  .links {
+    display: none;
+  }
+  .icons {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icons .Bars {
+    visibility: visible;
+  }
+
+  .speedDial {
+    position: fixed;
+    top: 8vmax;
+    right: 1vmax;
+    background: none;
+  }
+  /* .speedDialIcon {
+    width: 50px;
+    height: 50px;
+  } */
+  /* .speedDial {
+    position: fixed;
+    top: 25vmax;
+    right: 1vmax;
+  } */
+  .speedDial {
+    position: fixed;
+    top: 48vmax;
+    right: 1vmax;
+  }
+  .speedDialIcon {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search input {
+    display: none;
+  }
+  .menuBarsearch input {
+    display: block;
+  }
+  .icons .searchIcon {
+    visibility: visible;
+  }
+  .search {
+    visibility: hidden;
+  }
+  .cartBatch {
+    font-size: 2vmax;
+    padding: 0vmax 0.5vmax;
+  }
+
+  .cartBatch2 {
+    font-size: 2vmax;
+    padding: 0vmax 0.5vmax;
+  }
+}

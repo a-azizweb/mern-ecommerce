@@ -1,0 +1,113 @@
+.homeHeading {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 1.4vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.Container {
+  display: flex;
+  margin: 2vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.productCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.productCard > img {
+  width: 14vmax;
+  height: 17vmax;
+}
+
+.productCard > div {
+  margin: 0.5vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.productCardSpan {
+  margin: 0 0.5vmax;
+  font: 300 1vmax 'Roboto';
+}
+.productCard > Span.price {
+  font-size: 1.3vmax;
+}
+.productCard > p {
+  font-family: 'Roboto';
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: #333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1vmax;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-1vmax);
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    width: 100vw;
+  }
+
+  .homeHeading {
+    font-size: 3vmax;
+
+    width: 30vmax;
+  }
+
+  .productCard {
+    width: 15vmax;
+  }
+
+  .productCard > img {
+    width: 15vmax;
+    height: 19vmax;
+  }
+
+  .productCard > p {
+    font-size: 2.3vmax;
+    font-weight: 00;
+  }
+
+  .productCard > div {
+    margin: 0.5vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .productCard > div .stars {
+    font-size: 2.8vmax;
+  }
+  .productCardSpan {
+    margin: 0 0.5vmax;
+    font: 300 1.8vmax 'Roboto';
+  }
+
+  .productCard > Span.price {
+    font-size: 2.3vmax;
+  }
+}
